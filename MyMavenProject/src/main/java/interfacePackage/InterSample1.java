@@ -2,7 +2,7 @@ package interfacePackage;
 
 public interface InterSample1 {
 
-	abstract void display();
+	abstract void display1();
 	
 	
 }
