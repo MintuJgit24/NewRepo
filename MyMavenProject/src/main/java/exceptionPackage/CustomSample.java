@@ -10,11 +10,12 @@ public class CustomSample {
 		if (age >= 18) {
 
 			System.out.println("eligibile for voting.");
-		} else
+		} 
+		else
 		{
 			throw new VotingException("not eligible");
-			//custom name exception
-			//this is a constructor so created in another class with parent exception
+			//Customized name
+			//this is constructor invoking, so created another class with parent Exception
 		}
 
 	}

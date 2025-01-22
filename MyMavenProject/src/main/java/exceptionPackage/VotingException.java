@@ -2,11 +2,11 @@ package exceptionPackage;
 
 public class VotingException extends Exception {
 
-	public VotingException(String name) {
+	public VotingException(String msg) {
 		// TODO Auto-generated constructor stub
 		
-		super(name);
-		//calling the constructor variable and value
-		
+		super(msg);
+		//calling the parent class constructor and value
 	}
 }
+

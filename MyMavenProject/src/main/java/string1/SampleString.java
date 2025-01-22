@@ -21,11 +21,12 @@ public class SampleString {
 		System.out.println(sbs);
 		
 		//insert-to add at particular index
-		sb.insert(3,"hey");
+		sb.insert(4,"hey");
 		System.out.println(sb);
 		
-		//replace-it will add string in the 1st index and takes 3 places of the index starting at 0
-		sb1.replace(1, 3, "happy");
+		//replace-it will add string in the 1st index and takes 2 places of the index starting at 0
+		System.out.println(sb1);
+		sb1.replace(1, 2, "happy");
 		System.out.println(sb1);
 		
 		//reverse-to reverse a string

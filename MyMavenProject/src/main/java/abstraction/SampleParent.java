@@ -8,5 +8,4 @@ public abstract class SampleParent {
 		
 		System.out.println("hi non-abs parent");
 	}
-
 }

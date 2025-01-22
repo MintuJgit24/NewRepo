@@ -11,5 +11,4 @@ public abstract class Class1 {
 		
 		System.out.println("hi parent non-abstract method.");
 	}
-
 }

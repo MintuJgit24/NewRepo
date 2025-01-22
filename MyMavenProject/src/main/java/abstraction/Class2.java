@@ -15,7 +15,6 @@ public class Class2 extends Class1 {
 		System.out.println("hii hello child");
 	}
 
-
 	@Override
 	void printing() {
 		// TODO Auto-generated method stub
@@ -29,7 +28,5 @@ public class Class2 extends Class1 {
 		obj.show();
 		obj.diplaying();
 		obj.printing();
-
 	}
-
 }
