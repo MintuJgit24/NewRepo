@@ -8,7 +8,6 @@ public class AggregC {
 	public AggregC(String address, AggregP ref) {
 		this.address=address;
 		this.ref=ref;
-		
 	}
 	
 	public void display() {
@@ -28,5 +27,4 @@ public class AggregC {
 		System.out.println("sum from parent class method: "+ obj1.sum(4, 6));
 
 	}
-
 }

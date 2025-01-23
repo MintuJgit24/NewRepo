@@ -17,10 +17,12 @@ public class AbsClass2 extends AbsClass1{
 		// TODO Auto-generated method stub
 		AbsClass2 obj=new AbsClass2();
 		obj.show2();
+		obj.show();
+		obj.display();
 		
-		AbsClass1 obj2=new AbsClass2();
-		obj2.display();
-		obj2.show();
+		//AbsClass1 obj2=new AbsClass2();
+		//obj2.display();
+		//obj2.show();
 		
 
 	}
