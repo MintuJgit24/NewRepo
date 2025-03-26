@@ -27,10 +27,15 @@ public class Class1 implements InterSample1, InterSample2, InterSample3{
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		//to call all methods
 		Class1 obj=new Class1();
 		obj.display1();
 		obj.display2();
 		obj.display3();
+		
+		//to call any particular method
+		InterSample1 sample1=new Class1();
+		sample1.display1();
 
 	}
 
