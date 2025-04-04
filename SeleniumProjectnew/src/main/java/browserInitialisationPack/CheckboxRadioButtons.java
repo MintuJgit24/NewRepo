@@ -9,6 +9,7 @@ public class CheckboxRadioButtons extends Base {
 		driver.navigate().to("https://selenium.qabible.in/check-box-demo.php");
 		WebElement checkBox1=driver.findElement(By.xpath("(//input[@type='checkbox'])[1]"));
 		checkBox1.click();
+		System.out.println(checkBox1.isSelected());//to check if checkbox is selected or not
 	}
 	
 	public void radioButtons() {
@@ -23,8 +24,8 @@ public class CheckboxRadioButtons extends Base {
 		// TODO Auto-generated method stub
 		CheckboxRadioButtons obj=new CheckboxRadioButtons();
 		obj.intilialiseBrowser();
-		//obj.checkBox();
-		obj.radioButtons();
+		obj.checkBox();
+		//obj.radioButtons();
 
 	}
 

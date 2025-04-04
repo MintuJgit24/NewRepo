@@ -12,6 +12,8 @@ public class InputMessage extends Base{
 		WebElement msgField=driver.findElement(By.id("single-input-field"));
 		msgField.sendKeys("hi mintu");
 		
+		System.out.println(msgField.isEnabled());//to check if field is enabled or not
+		
 		WebElement showMsgField=driver.findElement(By.id("button-one"));
 		showMsgField.click();
 		
