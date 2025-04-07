@@ -52,6 +52,18 @@ public class TableHandling extends Base {
 		}
 	}
 	
+	public void checkData2() {
+		driver.navigate().to("https://selenium.qabible.in/table-pagination.php");
+		String checkValue="New York";
+		List<WebElement> checkData=driver.findElements(By.xpath("//table[@id='dtBasicExample']/tbody/tr/td[3]"));
+		for(WebElement elem:checkData) {
+			if(elem.getText().equals(checkValue)) {
+				System.out.println("value is: "+elem.getText());
+			}
+		}
+		
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		TableHandling objTable=new TableHandling();
@@ -60,7 +72,8 @@ public class TableHandling extends Base {
 		//objTable.selectParticularRow();
 		//objTable.singleTableData();
 		//objTable.columnData();
-		objTable.checkDataFromTable();
+		//objTable.checkDataFromTable();
+		objTable.checkData2();
 		
 	}
 
