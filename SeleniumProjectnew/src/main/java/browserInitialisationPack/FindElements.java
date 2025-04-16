@@ -13,7 +13,10 @@ public class FindElements extends Base {
 		List<WebElement> multipleField=driver.findElements(By.xpath("//input[@class='check-box-list']"));
 		for(WebElement element:multipleField) {
 			element.click();
+			System.out.println("clicked");
 		}
+		//WebElement selectAll=driver.findElement(By.xpath("//input[@value='Select All']"));
+		//selectAll.click();
 	}
 	
 	//assignment
@@ -30,7 +33,7 @@ public class FindElements extends Base {
 		// TODO Auto-generated method stub
 		FindElements obj=new FindElements();
 		obj.intilialiseBrowser();
-		//obj.findMultipleElements();
-		obj.printHi();
+		obj.findMultipleElements();
+		//obj.printHi();
 	}
 }

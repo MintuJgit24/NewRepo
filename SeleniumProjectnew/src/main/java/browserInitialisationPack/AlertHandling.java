@@ -10,6 +10,7 @@ public class AlertHandling extends Base{
 		driver.navigate().to("https://selenium.qabible.in/javascript-alert.php");
 		WebElement clickField1=driver.findElement(By.xpath("//button[@onclick='jsAlert()']"));
 		clickField1.click();
+		//alert is an interface
 		driver.switchTo().alert().accept();//to click ok of alert msg
 		System.out.println(clickField1.isDisplayed());//to check if alert is displayed or not
 	}

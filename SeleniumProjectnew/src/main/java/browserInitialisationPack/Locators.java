@@ -56,7 +56,7 @@ public class Locators extends Base {
     	WebElement cssSelectorField=driver.findElement(By.cssSelector("input#single-input-field"));
     	
     	//tag.class
-    	WebElement cssSelectorField2=driver.findElement(By.cssSelector("div.card-body"));
+    	WebElement cssSelectorField2=driver.findElement(By.cssSelector("div.header-top"));
     	
     	//tag[attributeype=attributevalue]
     	WebElement cssSelectorField3=driver.findElement(By.cssSelector("input[id=single-input-field]"));
