@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-16T13:29:52 IST" name="Suite" finished-at="2025-04-16T13:29:56 IST" duration-ms="4225">
+    <groups>
+    </groups>
+    <test started-at="2025-04-16T13:29:52 IST" name="Test" finished-at="2025-04-16T13:29:56 IST" duration-ms="4225">
+      <class name="automationPackage.LoginPageTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:automationPackage.LoginPageTest@7714e963]" started-at="2025-04-16T13:29:52 IST" name="beforeMethod" finished-at="2025-04-16T13:29:55 IST" duration-ms="3196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyUserLoginWithValidCredentials()[pri:1, instance:automationPackage.LoginPageTest@7714e963]" started-at="2025-04-16T13:29:55 IST" name="verifyUserLoginWithValidCredentials" description="verify whether user is able to login with valid credentials" finished-at="2025-04-16T13:29:56 IST" duration-ms="991" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLoginWithValidCredentials -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:automationPackage.LoginPageTest@7714e963]" started-at="2025-04-16T13:29:56 IST" name="afterMethod" finished-at="2025-04-16T13:29:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- automationPackage.LoginPageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
