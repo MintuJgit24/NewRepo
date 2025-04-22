@@ -21,6 +21,11 @@ public class LoginPage {
 	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement signIn;
 
+	@FindBy(xpath = "//span[text()='7rmart supermarket']")
+	private WebElement homeTitle;
+	
+	@FindBy(xpath="//div[@class='login-box']")private WebElement loginBox;
+
 	public void enterUsernameOnUsernameField(String username) {
 		userName.sendKeys(username);
 
@@ -32,6 +37,15 @@ public class LoginPage {
 
 	public void clickSignInButton() {
 		signIn.click();
+	}
+
+	// to check if dashboard is displayed or not
+	public boolean isDashboardDisplayed() {
+		return homeTitle.isDisplayed();
+	}
+	
+	public boolean isLoginBoxDisplayed() {
+		return loginBox.isDisplayed();
 	}
 
 }

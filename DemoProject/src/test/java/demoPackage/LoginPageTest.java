@@ -56,6 +56,4 @@ public class LoginPageTest extends Base{
 	  login.clickLogin();
 	  
   }
-  
-  
 }
