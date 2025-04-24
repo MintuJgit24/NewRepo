@@ -2,24 +2,24 @@
 <testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-24T13:42:35 IST" name="Default suite" finished-at="2025-04-24T13:42:44 IST" duration-ms="9270">
+  <suite started-at="2025-04-24T14:17:09 IST" name="Default suite" finished-at="2025-04-24T14:17:14 IST" duration-ms="4923">
     <groups>
     </groups>
-    <test started-at="2025-04-24T13:42:35 IST" name="Default test" finished-at="2025-04-24T13:42:44 IST" duration-ms="9270">
+    <test started-at="2025-04-24T14:17:09 IST" name="Default test" finished-at="2025-04-24T14:17:14 IST" duration-ms="4923">
       <class name="automationPackage.SubCategoryTest">
-        <test-method is-config="true" signature="browserInitialisation()[pri:0, instance:automationPackage.SubCategoryTest@1dde4cb2]" started-at="2025-04-24T13:42:35 IST" name="browserInitialisation" finished-at="2025-04-24T13:42:38 IST" duration-ms="3341" status="PASS">
+        <test-method is-config="true" signature="browserInitialisation()[pri:0, instance:automationPackage.SubCategoryTest@1dde4cb2]" started-at="2025-04-24T14:17:09 IST" name="browserInitialisation" finished-at="2025-04-24T14:17:12 IST" duration-ms="2850" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialisation -->
-        <test-method signature="createSubCategory()[pri:1, instance:automationPackage.SubCategoryTest@1dde4cb2]" started-at="2025-04-24T13:42:38 IST" name="createSubCategory" description="verify whether user is able to add subcategory" finished-at="2025-04-24T13:42:44 IST" duration-ms="5883" status="PASS">
+        <test-method signature="searchSubCategory()[pri:2, instance:automationPackage.SubCategoryTest@1dde4cb2]" started-at="2025-04-24T14:17:12 IST" name="searchSubCategory" description="verify whether user is able to search subcategory" finished-at="2025-04-24T14:17:14 IST" duration-ms="2032" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createSubCategory -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:automationPackage.SubCategoryTest@1dde4cb2]" started-at="2025-04-24T13:42:44 IST" name="driverQuit" finished-at="2025-04-24T13:42:44 IST" duration-ms="7" status="PASS">
+        </test-method> <!-- searchSubCategory -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:automationPackage.SubCategoryTest@1dde4cb2]" started-at="2025-04-24T14:17:14 IST" name="driverQuit" finished-at="2025-04-24T14:17:14 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createSubCategory status=SUCCESS method=SubCategoryTest.createSubCategory()[pri:1, instance:automationPackage.SubCategoryTest@1dde4cb2] output={null}]]]>
+                <![CDATA[[TestResult name=searchSubCategory status=SUCCESS method=SubCategoryTest.searchSubCategory()[pri:2, instance:automationPackage.SubCategoryTest@1dde4cb2] output={null}]]]>
               </value>
             </param>
           </params>

@@ -53,13 +53,14 @@ public class SubCategoryPage {
 	}
 
 	public SubCategoryPage selectCategoryFromDropDown() {
-		Select select = new Select(selectCategory);
-		select.selectByContainsVisibleText("Electronics");
+		//Select select = new Select(selectCategory);
+		//select.selectByContainsVisibleText("Electronics");
+		pageUtility.selectByContainsVisibleText(selectCategory, "Electronics");
 		return this;
 	}
 
 	public SubCategoryPage enterSubCategory() {
-		subCategory.sendKeys("Apple I-phone");
+		subCategory.sendKeys("Apple-phone pro");
 		return this;
 	}
 
@@ -68,8 +69,7 @@ public class SubCategoryPage {
 		return this;
 	}
 
-	public SubCategoryPage clickSaveBtn() throws AWTException {
-		pageUtility.setDelay(500);
+	public SubCategoryPage clickSaveBtn() {
 		saveBtn.click();
 		return this;
 	}
@@ -81,13 +81,14 @@ public class SubCategoryPage {
 	}
 
 	public SubCategoryPage selectSearchCategory() {
-		Select select = new Select(searchCategory);
-		select.selectByContainsVisibleText("Electronics");
+		//Select select = new Select(searchCategory);
+		//select.selectByContainsVisibleText("Electronics");
+		pageUtility.selectByContainsVisibleText(searchCategory, "Electronics");
 		return this;
 	}
 
 	public SubCategoryPage enterSearchSubCategory() {
-		enterCategory.sendKeys("I-phone");
+		enterCategory.sendKeys("Apple-phone pro");
 		return this;
 	}
 
