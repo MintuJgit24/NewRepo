@@ -4,6 +4,8 @@ package automationPackage;
 import org.testng.annotations.BeforeMethod;
 import utilities.ScreenShotUtility;
 import java.io.IOException;
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
@@ -18,6 +20,8 @@ public class Base {
 	  driver=new ChromeDriver();
 	  driver.get("https://groceryapp.uniqassosiates.com/admin/login");
 	  driver.manage().window().maximize();
+	  //implicit wait during browser launch
+	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	  
   }
 

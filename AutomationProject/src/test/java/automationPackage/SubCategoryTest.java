@@ -1,5 +1,6 @@
 package automationPackage;
 
+import java.awt.AWTException;
 import java.io.IOException;
 
 import org.testng.annotations.Test;
@@ -15,7 +16,7 @@ public class SubCategoryTest extends Base {
 	public SubCategoryPage subCategory;
 	
 	@Test(priority = 1, description="verify whether user is able to add subcategory")
-	public void createSubCategory() throws IOException {
+	public void createSubCategory() throws IOException, AWTException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);

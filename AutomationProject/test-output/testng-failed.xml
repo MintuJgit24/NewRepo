@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automationPackage.SearchUserTest">
+      <class name="automationPackage.AddUserTest">
         <methods>
           <include name="browserInitialisation"/>
-          <include name="searchUser"/>
+          <include name="addNewUser"/>
           <include name="driverQuit"/>
         </methods>
-      </class> <!-- automationPackage.SearchUserTest -->
+      </class> <!-- automationPackage.AddUserTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -6,9 +6,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import utilities.PageUtility;
+
 public class AddUserPage {
 	
 	public WebDriver driver;
+	
+	PageUtility pageUtility=new PageUtility();
 	
 	public AddUserPage(WebDriver driver) {
 		this.driver=driver;
@@ -39,14 +43,15 @@ public class AddUserPage {
 	
 	public AddUserPage clickNew() {
 		newBtn.click();
-		username.sendKeys("TestNgUser");
-		paswd.sendKeys("test20");
+		username.sendKeys("NGuser4");
+		paswd.sendKeys("test23");
 		return this;
 	}
 	
 	public AddUserPage selectUserType() {
-		Select select=new Select(userTypeSelect);
-		select.selectByIndex(1);
+		//pageUtility.selectByVisibleText(userTypeSelect, "Staff");
+		//pageUtility.selectByIndex(userTypeSelect, 1);
+		pageUtility.selectByContainsVisibleText(userTypeSelect, "Partner");
 		return this;
 	}
 	

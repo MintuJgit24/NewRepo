@@ -6,9 +6,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import utilities.PageUtility;
+
 public class SearchUserPage {
 
 	public WebDriver driver;
+	
+	PageUtility pageUtility=new PageUtility();
 	
 	public SearchUserPage(WebDriver driver) {
 		this.driver=driver;
@@ -33,8 +37,9 @@ public class SearchUserPage {
 	}
 	
 	public SearchUserPage selectUserType() {
-		Select select=new Select(selectUserType);
-		select.selectByIndex(1);
+		//Select select=new Select(selectUserType);
+		//select.selectByIndex(1);
+		pageUtility.selectByIndex(selectUserType, 1);
 		return this;
 	}
 	
