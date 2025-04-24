@@ -15,7 +15,7 @@ public WebDriver driver;
 		
 	}
 	
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-sub-category']")private WebElement moreInfo;
+	//@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-sub-category']")private WebElement moreInfo;
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-danger']")private WebElement newBtn;
 	@FindBy(xpath="//select[@name='cat_id']")private WebElement selectCategory;
 	@FindBy(xpath="//input[@id='subcategory']")private WebElement subCategory;
@@ -27,47 +27,57 @@ public WebDriver driver;
 	@FindBy(xpath="//button[@name='Search']")private WebElement searchBtn;
 	
 	
-	public void clickMoreInfo() {
-		moreInfo.click();
-	}
+	//public SubCategoryPage clickMoreInfo() {
+		//moreInfo.click();
+		//return this;
+	//}
 	
-	public void clickNewBtn() {
+	public SubCategoryPage clickNewBtn() {
 		newBtn.click();
+		return this;
 	}
 	
-	public void selectCategoryFromDropDown() {
+	public SubCategoryPage selectCategoryFromDropDown() {
 		Select select=new Select(selectCategory);
 		select.selectByContainsVisibleText("Electronics");
+		return this;
 	}
 	
-	public void enterSubCategory() {
-		subCategory.sendKeys("I phone");
+	public SubCategoryPage enterSubCategory() {
+		subCategory.sendKeys("I-phone");
+		return this;
 	}
 	
-	public void chooseImage() {
+	public SubCategoryPage chooseImage() {
 		chooseFile.sendKeys("C:\\Users\\mintu\\OneDrive\\Pictures\\028e0308-738c-4faa-a82f-23d17c19709a_2310x1300.jpg");
+		return this;
 	}
 	
-	public void clickSaveBtn() {
+	public SubCategoryPage clickSaveBtn() {
 		saveBtn.click();
+		return this;
 	}
 	
-	public void clickSearchBtnMain() {
+	public SubCategoryPage clickSearchBtnMain() {
 		seacrhBtnMain.click();
+		return this;
 		
 	}
 	
-	public void selectSearchCategory() {
+	public SubCategoryPage selectSearchCategory() {
 		Select select=new Select(searchCategory);
 		select.selectByContainsVisibleText("Electronics");
+		return this;
 	}
 	
-	public void enterSearchSubCategory() {
-		enterCategory.sendKeys("I phone");
+	public SubCategoryPage enterSearchSubCategory() {
+		enterCategory.sendKeys("I-phone");
+		return this;
 	}
 	
-	public void clickSearchBtnSmall() {
+	public SubCategoryPage clickSearchBtnSmall() {
 		searchBtn.click();
+		return this;
 	}
 
 }

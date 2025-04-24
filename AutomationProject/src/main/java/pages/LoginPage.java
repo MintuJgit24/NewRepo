@@ -26,17 +26,20 @@ public class LoginPage {
 	
 	@FindBy(xpath="//div[@class='login-box']")private WebElement loginBox;
 
-	public void enterUsernameOnUsernameField(String username) {
+	//chaining of methods
+	public LoginPage enterUsernameOnUsernameField(String username) {
 		userName.sendKeys(username);
-
+		return this;//same class
 	}
 
-	public void enterPasswordOnPasswordField(String password) {
+	public LoginPage enterPasswordOnPasswordField(String password) {
 		pswd.sendKeys(password);
+		return this;
 	}
 
-	public void clickSignInButton() {
+	public HomePage clickSignInButton() {
 		signIn.click();
+		return new HomePage(driver);//different class so do like this
 	}
 
 	// to check if dashboard is displayed or not

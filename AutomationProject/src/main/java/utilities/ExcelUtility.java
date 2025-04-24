@@ -17,7 +17,7 @@ public class ExcelUtility {
 	public static String getStringData(int a, int b,String sheet) throws IOException {
 		//a to take row value
 		//b to take cell value
-		f=new FileInputStream("C:\\PROGRAMS DEC\\AutomationProject\\src\\test\\resources\\Test Data.xlsx");
+		f=new FileInputStream("C:\\Users\\mintu\\git\\NewRepo\\AutomationProject\\src\\test\\resources\\TestData.xlsx");
 		wb=new XSSFWorkbook(f);
 		sh=wb.getSheet(sheet);  //to take value from sheet getSheet() method used
 		XSSFRow r=sh.getRow(a);    //XSSFRow class imported; getRow() method to take value from row
@@ -28,7 +28,7 @@ public class ExcelUtility {
 	}
 	
 	public static String getIntegerData(int a, int b,String sheet) throws IOException{
-		f=new FileInputStream("C:\\PROGRAMS DEC\\AutomationProject\\src\\test\\resources\\Test Data.xlsx");
+		f=new FileInputStream("C:\\Users\\mintu\\git\\NewRepo\\AutomationProject\\src\\test\\resources\\TestData.xlsx");
 		wb=new XSSFWorkbook(f);
 		sh=wb.getSheet(sheet);
 		XSSFRow r=sh.getRow(a);
@@ -40,6 +40,4 @@ public class ExcelUtility {
 		return String.valueOf(x);
 				
 	}
-
-
 }

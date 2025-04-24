@@ -16,26 +16,30 @@ public class SearchUserPage {
 		
 	}
 	
-	@FindBy(xpath="//a[@class='btn btn-rounded btn-primary']")private WebElement searchBtnMain;
+	//@FindBy(xpath="//a[@class='btn btn-rounded btn-primary']")private WebElement searchBtnMain;
 	@FindBy(xpath="//input[@id='un']")private WebElement username;
 	@FindBy(xpath="//select[@id='ut']")private WebElement selectUserType;
 	@FindBy(xpath="//button[@name='Search']")private WebElement searchBtn;
 	
 	
-	public void clickSearchBtnMain() {
-		searchBtnMain.click();
-	}
+	//public SearchUserPage clickSearchBtnMain() {
+		//searchBtnMain.click();
+		//return this;
+	//}
 	
-	public void enterUserName() {
+	public SearchUserPage enterUserName() {
 		username.sendKeys("seleUser");
+		return this;
 	}
 	
-	public void selectUserType() {
+	public SearchUserPage selectUserType() {
 		Select select=new Select(selectUserType);
 		select.selectByIndex(1);
+		return this;
 	}
 	
-	public void clickSearchBtnSmall() {
+	public SearchUserPage clickSearchBtnSmall() {
 		searchBtn.click();
+		return this;
 	}
 }

@@ -13,16 +13,31 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 	}
 	
+	@FindBy(xpath="//i[@class='nav-icon fas fa-users']")private WebElement adminUser;
 	@FindBy(xpath="//li[@class='nav-item dropdown']")private WebElement userNameLink;
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/logout']")private WebElement logout;
 	
-	public void clickUserNameLink() {
+	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-sub-category']")private WebElement moreInfo;
+	
+	public HomePage clickUserNameLink() {
 		userNameLink.click();
+		return this;
 	}
 	
-	public void clickLogout() {
+	public HomePage clickLogout() {
 		logout.click();
+		return this;
 	}
+	
+	public AddUserPage clickAdminUsers() {
+			adminUser.click();
+			return new AddUserPage(driver);
+		}
+	
+	public SubCategoryPage clickMoreInfo() {
+		moreInfo.click();
+		return new SubCategoryPage(driver);
+	} 
 	
 
 }
