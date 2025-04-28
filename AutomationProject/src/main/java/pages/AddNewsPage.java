@@ -14,25 +14,43 @@ public class AddNewsPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//p[text()='Manage News']")private WebElement manageNews;
+	//@FindBy(xpath="//p[text()='Manage News']")private WebElement manageNews;
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-danger']")private WebElement newBtn;
 	@FindBy(xpath="//textarea[@id='news']")private WebElement enterNews;
 	@FindBy(xpath="//button[text()='Save']")private WebElement saveBtn;
 	
+	@FindBy(xpath="//button[@data-dismiss='alert']")private WebElement alertMsg;
 	
-	public void clickManageNews() {
-		manageNews.click();
-	}
+	@FindBy(xpath="//a[@class='btn btn-rounded btn-primary']")private WebElement searchBtnMain;
+
 	
-	public void clickNewBtn() {
+	
+	//public AddNewsPage clickManageNews() {
+		//manageNews.click();
+		//return this;
+	//}
+	
+	public AddNewsPage clickNewBtn() {
 		newBtn.click();
+		return this;
 	}
 	
-	public void enterNews() {
-		enterNews.sendKeys("Admission started for new Selenium batch");
+	public AddNewsPage enterNews() {
+		enterNews.sendKeys("testing news 1");
+		return this;
 	}
 	
-	public void clickSaveBtn() {
+	public AddNewsPage clickSaveBtn() {
 		saveBtn.click();
+		return this;
+	}
+	
+	public boolean isAlertCameonSaveNews() {
+		return alertMsg.isDisplayed();
+	}
+	
+	public SearchNewsPage clickSearchBtnMain() {
+		searchBtnMain.click();
+		return new SearchNewsPage(driver);
 	}
 }

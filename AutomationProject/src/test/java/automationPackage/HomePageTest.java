@@ -29,9 +29,9 @@ public class HomePageTest extends Base {
 		//home.clickLogout();
 		
 		//ASSERTION for checking expected and actual result is matching or not.
-		String expected="Login | 7rmart supermarket";
 		String actual=driver.getTitle();
+		String expected="Login | 7rmart supermarket";
 		//System.out.println("actual title"+actual);
-		Assert.assertEquals(expected, actual,"Logout is unsuccessful");
+		Assert.assertEquals(actual,expected,"Logout is unsuccessful");
 	}
 }

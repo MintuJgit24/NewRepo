@@ -1,13 +1,13 @@
 package pages;
 
-import java.awt.AWTException;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
+
+import constant.Constant;
+import utilities.FileUploadUtility;
 import utilities.PageUtility;
 
 public class SubCategoryPage {
@@ -41,6 +41,10 @@ public class SubCategoryPage {
 	private WebElement enterCategory;
 	@FindBy(xpath = "//button[@name='Search']")
 	private WebElement searchBtn;
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+	private WebElement alertSuccess;
+	
+	@FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr[1]/td[1]")private WebElement tableValue;
 
 	// public SubCategoryPage clickMoreInfo() {
 	// moreInfo.click();
@@ -53,25 +57,31 @@ public class SubCategoryPage {
 	}
 
 	public SubCategoryPage selectCategoryFromDropDown() {
-		//Select select = new Select(selectCategory);
-		//select.selectByContainsVisibleText("Electronics");
-		pageUtility.selectByContainsVisibleText(selectCategory, "Electronics");
+		// Select select = new Select(selectCategory);
+		// select.selectByContainsVisibleText("Electronics");
+		pageUtility.selectByContainsVisibleText(selectCategory, "veggies");
 		return this;
 	}
 
 	public SubCategoryPage enterSubCategory() {
-		subCategory.sendKeys("Apple-phone pro");
+		subCategory.sendKeys("Cabbage2");
 		return this;
 	}
 
 	public SubCategoryPage chooseImage() {
-		chooseFile.sendKeys("C:\\Users\\mintu\\OneDrive\\Pictures\\028e0308-738c-4faa-a82f-23d17c19709a_2310x1300.jpg");
+		// chooseFile.sendKeys("C:\\Users\\mintu\\OneDrive\\Pictures\\028e0308-738c-4faa-a82f-23d17c19709a_2310x1300.jpg");
+		FileUploadUtility fileUpload = new FileUploadUtility();
+		fileUpload.sendKeysForFileUpload(chooseFile, Constant.IMGPATH);
 		return this;
 	}
 
 	public SubCategoryPage clickSaveBtn() {
 		saveBtn.click();
 		return this;
+	}
+
+	public boolean succesAlertAfterAddingSubCategory() {
+		return alertSuccess.isDisplayed();
 	}
 
 	public SubCategoryPage clickSearchBtnMain() {
@@ -81,20 +91,24 @@ public class SubCategoryPage {
 	}
 
 	public SubCategoryPage selectSearchCategory() {
-		//Select select = new Select(searchCategory);
-		//select.selectByContainsVisibleText("Electronics");
+		// Select select = new Select(searchCategory);
+		// select.selectByContainsVisibleText("Electronics");
 		pageUtility.selectByContainsVisibleText(searchCategory, "Electronics");
 		return this;
 	}
 
 	public SubCategoryPage enterSearchSubCategory() {
-		enterCategory.sendKeys("Apple-phone pro");
+		enterCategory.sendKeys("cabbage");
 		return this;
 	}
 
 	public SubCategoryPage clickSearchBtnSmall() {
 		searchBtn.click();
 		return this;
+	}
+	
+	public String getTableValue() {
+		return tableValue.getText();
 	}
 
 }

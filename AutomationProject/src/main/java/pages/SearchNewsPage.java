@@ -14,19 +14,27 @@ public class SearchNewsPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//a[@class='btn btn-rounded btn-primary']")private WebElement searchBtnMain;
+	//@FindBy(xpath="//a[@class='btn btn-rounded btn-primary']")private WebElement searchBtnMain;
 	@FindBy(xpath="//input[@placeholder='Title']")private WebElement newsTitle;
 	@FindBy(xpath="//button[@name='Search']")private WebElement searchBtnSmall;
+	@FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr[1]/td[1]")private WebElement tableValue;
 	
-	public void clickSearchBtnMain() {
-		searchBtnMain.click();
+	//public SearchNewsPage clickSearchBtnMain() {
+		//searchBtnMain.click();
+		//return this;
+	//}
+	
+	public SearchNewsPage enterNewsTitle() {
+		newsTitle.sendKeys("testing news 60");
+		return this;
 	}
 	
-	public void enterNewsTitle() {
-		newsTitle.sendKeys("Admission started for new Selenium batch");
-	}
-	
-	public void clickSearchBtnSmall() {
+	public SearchNewsPage clickSearchBtnSmall() {
 		searchBtnSmall.click();
+		return this;
+	}
+	
+	public String getTableValue() {
+		return tableValue.getText();
 	}
 }

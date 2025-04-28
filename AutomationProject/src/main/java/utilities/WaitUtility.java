@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WaitUtility {
 	
-	public WebDriver driver;
+	//public WebDriver driver;
 	
 	//explicit wait for each weblement can be used
 	//this method for all click actions
@@ -19,7 +19,7 @@ public class WaitUtility {
 	
 	public void waitForElementToBeSelected(WebDriver driver, WebElement element) {
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeSelected(element));
+		wait.until(ExpectedConditions.elementToBeSelected(element));//like in dropdown
 	}
 	
 	public void waitForElementToBeVisible(WebDriver driver, WebElement element) {
@@ -34,12 +34,13 @@ public class WaitUtility {
 	
 	public void waitForElementConatinsText(WebDriver driver, WebElement element,String text) {
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.textToBePresentInElement(element, text));
+		wait.until(ExpectedConditions.textToBePresentInElement(element, text));//text to be present in forms e.g
+	}
+	
+	public void waitFor(WebDriver driver, WebElement element,String text) {
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.alertIsPresent());
 	}
 	
 	
-	
-	//create 5 methods
-	
-
 }

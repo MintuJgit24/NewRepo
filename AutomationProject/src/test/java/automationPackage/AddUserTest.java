@@ -3,6 +3,8 @@ package automationPackage;
 import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import constant.Constant;
 import pages.AddUserPage;
 import pages.HomePage;
 import pages.LoginPage;
@@ -33,6 +35,6 @@ public class AddUserTest extends Base {
 		addUser.clickManagerUser().clickNew().selectUserType().clickSaveBtn();
 
 		boolean isAlertDisplayed = addUser.isAlertDisplayed();
-		Assert.assertTrue(isAlertDisplayed, "Alert after adding user is not displayed.");
+		Assert.assertTrue(isAlertDisplayed,Constant.ERR_MSG_ALERT_AFTER_ADDING_USER);
 	}
 }

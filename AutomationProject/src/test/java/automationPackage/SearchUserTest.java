@@ -2,8 +2,10 @@ package automationPackage;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.AddUserPage;
 import pages.HomePage;
 import pages.LoginPage;
@@ -31,14 +33,26 @@ public class SearchUserTest extends Base {
 		// addUser.clickManagerUser();
 		addUser = homePage.clickAdminUsers();
 		addUser.clickManagerUser();
-		search=addUser.clickSearchBtnMain();
+		search = addUser.clickSearchBtnMain();
 		search.enterUserName().selectUserType().clickSearchBtnSmall();
-		
 
 		// SearchUserPage search = new SearchUserPage(driver);
-		//search.clickSearchBtnMain();
-		//search.enterUserName();
-		//search.selectUserType();
-		//search.clickSearchBtnSmall();
+		// search.clickSearchBtnMain();
+		// search.enterUserName();
+		// search.selectUserType();
+		// search.clickSearchBtnSmall();
+
+		String expected = ".........RESULT NOT FOUND.......";
+		String actual = search.getTableValue();
+		//System.out.println(actual);
+
+		boolean showResults = true;
+		if (actual.equals(expected)) {
+			showResults = false;
+			Assert.assertFalse(showResults, Constant.ERR_MSG_USER_FOUND);
+		} else {
+			Assert.assertTrue(showResults, Constant.ERR_MSG_USER_NOT_FOUND);
+		}
+
 	}
 }

@@ -25,6 +25,12 @@ public class SearchUserPage {
 	@FindBy(xpath="//select[@id='ut']")private WebElement selectUserType;
 	@FindBy(xpath="//button[@name='Search']")private WebElement searchBtn;
 	
+	@FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")
+	private WebElement warnignMessagePresent;
+
+	@FindBy(xpath = "//table[@class='table table-bordered table-hover table-sm']/tbody/tr[1]/td[1]")
+	private WebElement tableValue;
+	
 	
 	//public SearchUserPage clickSearchBtnMain() {
 		//searchBtnMain.click();
@@ -32,7 +38,7 @@ public class SearchUserPage {
 	//}
 	
 	public SearchUserPage enterUserName() {
-		username.sendKeys("seleUser");
+		username.sendKeys("happy");
 		return this;
 	}
 	
@@ -47,4 +53,12 @@ public class SearchUserPage {
 		searchBtn.click();
 		return this;
 	}
+	
+	public boolean warningMesageDisplayed() {
+		return warnignMessagePresent.isDisplayed();
+	}
+	public String getTableValue() {
+		return tableValue.getText();
+	}
+
 }

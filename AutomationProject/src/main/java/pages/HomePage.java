@@ -19,6 +19,8 @@ public class HomePage {
 	
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-sub-category']")private WebElement moreInfo;
 	
+	@FindBy(xpath="//p[text()='Manage News']")private WebElement manageNews;
+	
 	public HomePage clickUserNameLink() {
 		userNameLink.click();
 		return this;
@@ -38,6 +40,11 @@ public class HomePage {
 		moreInfo.click();
 		return new SubCategoryPage(driver);
 	} 
+	
+	public AddNewsPage clickManageNews() {
+		manageNews.click();
+		return new AddNewsPage(driver);
+	}
 	
 
 }

@@ -21,8 +21,7 @@ public class Base {
 	  driver.get("https://groceryapp.uniqassosiates.com/admin/login");
 	  driver.manage().window().maximize();
 	  //implicit wait during browser launch
-	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-	  
+	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); 
   }
 
   @AfterMethod
