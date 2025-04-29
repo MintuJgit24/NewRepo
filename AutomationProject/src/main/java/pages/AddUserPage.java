@@ -52,7 +52,7 @@ public class AddUserPage {
 
 	public AddUserPage clickNew() {
 		newBtn.click();
-		username.sendKeys("NGuser4");
+		username.sendKeys("NGuser6");
 		paswd.sendKeys("test23");
 		return this;
 	}

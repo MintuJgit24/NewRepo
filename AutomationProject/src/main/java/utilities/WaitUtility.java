@@ -37,7 +37,7 @@ public class WaitUtility {
 		wait.until(ExpectedConditions.textToBePresentInElement(element, text));//text to be present in forms e.g
 	}
 	
-	public void waitFor(WebDriver driver, WebElement element,String text) {
+	public void waitForAlertIsPresent(WebDriver driver, WebElement element,String text) {
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.alertIsPresent());
 	}
