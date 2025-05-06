@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [MultiBrowser]" guice-stage="DEVELOPMENT">
+  <parameter name="browsers" value="Chrome"/>
+  <test thread-count="5" parallel="classes" name="ChromeTest(failed)">
+    <classes>
+      <class name="automationPackage.AddNewsTest">
+        <methods>
+          <include name="browserInitialisation"/>
+          <include name="addNews"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- automationPackage.AddNewsTest -->
+      <class name="automationPackage.AddUserTest">
+        <methods>
+          <include name="browserInitialisation"/>
+          <include name="addNewUser"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- automationPackage.AddUserTest -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+</suite> <!-- Failed suite [MultiBrowser] -->

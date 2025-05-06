@@ -15,7 +15,7 @@ public class AddUserTest extends Base {
 	public HomePage homePage;
 	public AddUserPage addUser;
 
-	@Test(description = "verify whether user is able to add new user")
+	@Test(description = "verify whether user is able to add new user",retryAnalyzer = retryPackage.Retry.class)
 	public void addNewUser() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");

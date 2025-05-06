@@ -36,7 +36,7 @@ public class AddNewsPage {
 	}
 	
 	public AddNewsPage enterNews() {
-		enterNews.sendKeys("testing news 1");
+		enterNews.sendKeys("testing news retry");
 		return this;
 	}
 	

@@ -14,7 +14,7 @@ public class LoginPageTest extends Base {
 
 	public HomePage homePage;
 
-	@Test(priority = 1, description = "verify whether user is able to login with valid credentials")
+	@Test(priority = 1, description = "verify whether user is able to login with valid credentials",groups = {"SmokeTest"})
 	public void verifyUserLoginWithValidCredentials() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
@@ -31,7 +31,7 @@ public class LoginPageTest extends Base {
 		// Assert.assertFalse(isHomePageDisplayed, "Home page is loaded");
 	}
 
-	@Test(priority = 2, description = "verify whether user is able to login with invalid username and valid password")
+	@Test(priority = 2, description = "verify whether user is able to login with invalid username and valid password",groups = {"SmokeTest"})
 	public void verifyUserLoginWithInvalidUserNameAndValidPassword() throws IOException {
 		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
