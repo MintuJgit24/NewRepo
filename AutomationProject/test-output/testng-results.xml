@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-06T12:31:58 IST" name="Grouping" finished-at="2025-05-06T12:32:10 IST" duration-ms="11522">
+  <suite started-at="2025-05-07T11:17:02 IST" name="MultiBrowser" finished-at="2025-05-07T11:17:08 IST" duration-ms="6175">
     <groups>
-      <group name="SmokeTest">
-        <method signature="LoginPageTest.verifyUserLoginWithInvalidUserNameAndValidPassword()[pri:2, instance:automationPackage.LoginPageTest@dbf57b3]" name="verifyUserLoginWithInvalidUserNameAndValidPassword" class="automationPackage.LoginPageTest"/>
-        <method signature="LoginPageTest.verifyUserLoginWithValidCredentials()[pri:1, instance:automationPackage.LoginPageTest@dbf57b3]" name="verifyUserLoginWithValidCredentials" class="automationPackage.LoginPageTest"/>
-      </group> <!-- SmokeTest -->
     </groups>
-    <test started-at="2025-05-06T12:31:58 IST" name="grouping.xml" finished-at="2025-05-06T12:32:10 IST" duration-ms="11522">
-      <class name="automationPackage.LoginPageTest">
-        <test-method is-config="true" signature="browserInitialisation(java.lang.String)[pri:0, instance:automationPackage.LoginPageTest@dbf57b3]" started-at="2025-05-06T12:31:58 IST" name="browserInitialisation" finished-at="2025-05-06T12:32:03 IST" duration-ms="4566" status="PASS">
+    <test started-at="2025-05-07T11:17:02 IST" name="ChromeTest" finished-at="2025-05-07T11:17:07 IST" duration-ms="5469">
+      <class name="automationPackage.AddNewsTest">
+        <test-method is-config="true" signature="browserInitialisation(java.lang.String)[pri:0, instance:automationPackage.AddNewsTest@795cd85e]" started-at="2025-05-07T11:17:02 IST" name="browserInitialisation" finished-at="2025-05-07T11:17:05 IST" duration-ms="3204" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,26 +18,52 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialisation -->
-        <test-method signature="verifyUserLoginWithValidCredentials()[pri:1, instance:automationPackage.LoginPageTest@dbf57b3]" started-at="2025-05-06T12:32:03 IST" name="verifyUserLoginWithValidCredentials" description="verify whether user is able to login with valid credentials" finished-at="2025-05-06T12:32:06 IST" duration-ms="2903" status="PASS">
+        <test-method signature="addNews()[pri:0, instance:automationPackage.AddNewsTest@795cd85e]" started-at="2025-05-07T11:17:05 IST" name="addNews" description="verify whether user is able to add news" finished-at="2025-05-07T11:17:07 IST" duration-ms="2219" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserLoginWithValidCredentials -->
-        <test-method is-config="true" signature="browserInitialisation(java.lang.String)[pri:0, instance:automationPackage.LoginPageTest@dbf57b3]" started-at="2025-05-06T12:32:06 IST" name="browserInitialisation" finished-at="2025-05-06T12:32:09 IST" duration-ms="3138" status="PASS">
+        </test-method> <!-- addNews -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:automationPackage.AddNewsTest@795cd85e]" started-at="2025-05-07T11:17:07 IST" name="driverQuit" finished-at="2025-05-07T11:17:07 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[[TestResult name=addNews status=SUCCESS method=AddNewsTest.addNews()[pri:0, instance:automationPackage.AddNewsTest@795cd85e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+      </class> <!-- automationPackage.AddNewsTest -->
+    </test> <!-- ChromeTest -->
+    <test started-at="2025-05-07T11:17:02 IST" name="EdgeTest" finished-at="2025-05-07T11:17:08 IST" duration-ms="6175">
+      <class name="automationPackage.AddNewsTest">
+        <test-method is-config="true" signature="browserInitialisation(java.lang.String)[pri:0, instance:automationPackage.AddNewsTest@77fbd92c]" started-at="2025-05-07T11:17:02 IST" name="browserInitialisation" finished-at="2025-05-07T11:17:07 IST" duration-ms="4637" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialisation -->
-        <test-method signature="verifyUserLoginWithInvalidUserNameAndValidPassword()[pri:2, instance:automationPackage.LoginPageTest@dbf57b3]" started-at="2025-05-06T12:32:09 IST" name="verifyUserLoginWithInvalidUserNameAndValidPassword" description="verify whether user is able to login with invalid username and valid password" finished-at="2025-05-06T12:32:10 IST" duration-ms="717" status="PASS">
+        <test-method signature="addNews()[pri:0, instance:automationPackage.AddNewsTest@77fbd92c]" started-at="2025-05-07T11:17:07 IST" name="addNews" description="verify whether user is able to add news" finished-at="2025-05-07T11:17:08 IST" duration-ms="1498" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserLoginWithInvalidUserNameAndValidPassword -->
-      </class> <!-- automationPackage.LoginPageTest -->
-    </test> <!-- grouping.xml -->
-  </suite> <!-- Grouping -->
+        </test-method> <!-- addNews -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:automationPackage.AddNewsTest@77fbd92c]" started-at="2025-05-07T11:17:08 IST" name="driverQuit" finished-at="2025-05-07T11:17:08 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addNews status=SUCCESS method=AddNewsTest.addNews()[pri:0, instance:automationPackage.AddNewsTest@77fbd92c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+      </class> <!-- automationPackage.AddNewsTest -->
+    </test> <!-- EdgeTest -->
+  </suite> <!-- MultiBrowser -->
 </testng-results>

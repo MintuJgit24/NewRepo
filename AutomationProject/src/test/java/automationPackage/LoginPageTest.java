@@ -41,8 +41,8 @@ public class LoginPageTest extends Base {
 		login.enterPasswordOnPasswordField(password);
 		login.clickSignInButton();
 		// boolean isLoginBoxDisplayed = login.isLoginBoxDisplayed();
-		//boolean isHomePageDisplayed = login.isDashboardDisplayed();
-		//Assert.assertFalse(isHomePageDisplayed, "Login success");
+		boolean isHomePageDisplayed = login.isDashboardDisplayed();
+		Assert.assertTrue(isHomePageDisplayed, "Login success");
 	}
 
 	@Test(priority = 3, description = "verify whether user is able to login with valid username and invalid password")
@@ -54,9 +54,9 @@ public class LoginPageTest extends Base {
 		login.enterUsernameOnUsernameField(username);
 		login.enterPasswordOnPasswordField(password);
 		login.clickSignInButton();
-		// boolean isLoginBoxDisplayed = login.isLoginBoxDisplayed();
-		//boolean isHomePageDisplayed = login.isDashboardDisplayed();
-		//Assert.assertTrue(isHomePageDisplayed, "Login success");
+		//boolean isLoginBoxDisplayed = login.isLoginBoxDisplayed();
+		boolean isHomePageDisplayed = login.isDashboardDisplayed();
+		Assert.assertTrue(isHomePageDisplayed, "Login success");
 	}
 
 	@Test(priority = 4, description = "verify whether user is able to login with invalid username and invalid password")
@@ -68,8 +68,8 @@ public class LoginPageTest extends Base {
 		login.enterUsernameOnUsernameField(username);
 		login.enterPasswordOnPasswordField(password);
 		login.clickSignInButton();
-		// boolean isLoginBoxDisplayed = login.isLoginBoxDisplayed();
-		//boolean isHomePageDisplayed = login.isDashboardDisplayed();
-		//Assert.assertTrue(isHomePageDisplayed, "Login success");
+		//boolean isLoginBoxDisplayed = login.isLoginBoxDisplayed();
+		boolean isHomePageDisplayed = login.isDashboardDisplayed();
+		Assert.assertTrue(isHomePageDisplayed, "Login success");
 	}
 }
