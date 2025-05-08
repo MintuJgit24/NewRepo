@@ -14,7 +14,8 @@ public class LoginPageTest extends Base {
 
 	public HomePage homePage;
 
-	@Test(priority = 1, description = "verify whether user is able to login with valid credentials",groups = {"SmokeTest"})
+	@Test(priority = 1, description = "verify whether user is able to login with valid credentials", groups = {
+			"SmokeTest" })
 	public void verifyUserLoginWithValidCredentials() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
@@ -22,54 +23,50 @@ public class LoginPageTest extends Base {
 		LoginPage login = new LoginPage(driver);
 		// chaining of methods
 		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password);
-		// login.enterPasswordOnPasswordField(password);
 		homePage = login.clickSignInButton();
 		boolean isHomePageDisplayed = login.isDashboardDisplayed();
 		// to verify tc passes, this comes if tc passes
-		Assert.assertTrue(isHomePageDisplayed,Constant.ERR_MSG_FOR_LOGIN_CLICK);
+		Assert.assertTrue(isHomePageDisplayed, Constant.ERR_MSG_FOR_LOGIN_CLICK);
 		// if home page not loaded this msg displays and TC failed
-		// Assert.assertFalse(isHomePageDisplayed, "Home page is loaded");
+		// Assert.assertFalse(isHomePageDisplayed, "Home page is not loaded");
 	}
 
-	@Test(priority = 2, description = "verify whether user is able to login with invalid username and valid password",groups = {"SmokeTest"})
+	@Test(priority = 2, description = "verify whether user is able to login with invalid username and valid password", groups = {
+			"SmokeTest" }, retryAnalyzer = retryPackage.Retry.class)
 	public void verifyUserLoginWithInvalidUserNameAndValidPassword() throws IOException {
 		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(username);
-		login.enterPasswordOnPasswordField(password);
-		login.clickSignInButton();
-		// boolean isLoginBoxDisplayed = login.isLoginBoxDisplayed();
-		boolean isHomePageDisplayed = login.isDashboardDisplayed();
-		Assert.assertTrue(isHomePageDisplayed, "Login success");
+		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password);
+		homePage = login.clickSignInButton();
+		boolean isLoginBoxDisplayed = login.isLoginBoxDisplayed();
+		Assert.assertTrue(isLoginBoxDisplayed, Constant.ERR_MSG_FOR_INVALID_LOGIN);
 	}
 
-	@Test(priority = 3, description = "verify whether user is able to login with valid username and invalid password")
+	@Test(priority = 3, description = "verify whether user is able to login with valid username and invalid password", retryAnalyzer = retryPackage.Retry.class)
 	public void verifyUserLoginWithValidUserNameAndInvalidPassword() throws IOException {
 		String username = ExcelUtility.getStringData(2, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(2, 1, "LoginPage");
 
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(username);
-		login.enterPasswordOnPasswordField(password);
-		login.clickSignInButton();
-		//boolean isLoginBoxDisplayed = login.isLoginBoxDisplayed();
-		boolean isHomePageDisplayed = login.isDashboardDisplayed();
-		Assert.assertTrue(isHomePageDisplayed, "Login success");
+		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password);
+		homePage = login.clickSignInButton();
+		boolean isLoginBoxDisplayed = login.isLoginBoxDisplayed();
+		Assert.assertTrue(isLoginBoxDisplayed, Constant.ERR_MSG_FOR_INVALID_LOGIN);
+		
 	}
 
-	@Test(priority = 4, description = "verify whether user is able to login with invalid username and invalid password")
+	@Test(priority = 4, description = "verify whether user is able to login with invalid username and invalid password", retryAnalyzer = retryPackage.Retry.class)
 	public void verifyUserLoginWithInvalidUserNameAndInvalidPassword() throws IOException {
 		String username = ExcelUtility.getStringData(3, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(3, 1, "LoginPage");
 
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(username);
-		login.enterPasswordOnPasswordField(password);
-		login.clickSignInButton();
-		//boolean isLoginBoxDisplayed = login.isLoginBoxDisplayed();
-		boolean isHomePageDisplayed = login.isDashboardDisplayed();
-		Assert.assertTrue(isHomePageDisplayed, "Login success");
+		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password);
+		homePage = login.clickSignInButton();
+		boolean isLoginBoxDisplayed = login.isLoginBoxDisplayed();
+		Assert.assertTrue(isLoginBoxDisplayed, Constant.ERR_MSG_FOR_INVALID_LOGIN);
+		
 	}
 }

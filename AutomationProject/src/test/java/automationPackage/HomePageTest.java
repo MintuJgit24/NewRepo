@@ -12,7 +12,7 @@ public class HomePageTest extends Base {
 	
 	public HomePage homePage;
 
-	@Test(description = "verify whether user is able to login to homepage and logout ")
+	@Test(description = "verify whether user is able to login to homepage and logout ", retryAnalyzer = retryPackage.Retry.class)
 	public void verifyUserLogout() throws IOException {
 		//inside TC only once driver should be passed
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");

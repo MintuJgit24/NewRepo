@@ -53,7 +53,7 @@ public class Base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void driverQuit(ITestResult iTestResult) throws IOException {
 		if (iTestResult.getStatus() == ITestResult.FAILURE) {
 

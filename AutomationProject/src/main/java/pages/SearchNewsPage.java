@@ -24,8 +24,8 @@ public class SearchNewsPage {
 		//return this;
 	//}
 	
-	public SearchNewsPage enterNewsTitle() {
-		newsTitle.sendKeys("testing news 60");
+	public SearchNewsPage enterNewsTitle(String news) {
+		newsTitle.sendKeys(news);
 		return this;
 	}
 	

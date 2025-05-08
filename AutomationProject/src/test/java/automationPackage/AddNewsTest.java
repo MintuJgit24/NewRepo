@@ -23,10 +23,11 @@ public class AddNewsTest extends Base {
 		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password);
 		// login.enterPasswordOnPasswordField(password);
 		homePage = login.clickSignInButton();
-
+		
+		String addNews=ExcelUtility.getStringData(0, 0, "ManageNews");
 		// AddNewsPage news=new AddNewsPage(driver);
 		news = homePage.clickManageNews();
-		news.clickNewBtn().enterNews().clickSaveBtn();
+		news.clickNewBtn().enterNews(addNews).clickSaveBtn();
 		// news.enterNews();
 		// news.clickSaveBtn();
 

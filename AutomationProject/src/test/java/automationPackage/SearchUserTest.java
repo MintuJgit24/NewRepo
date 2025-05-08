@@ -18,7 +18,7 @@ public class SearchUserTest extends Base {
 	public AddUserPage addUser;
 	public SearchUserPage search;
 
-	@Test(description = "verify whether user is able to search user")
+	@Test(description = "verify whether user is able to search user", retryAnalyzer = retryPackage.Retry.class)
 	public void searchUser() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
@@ -28,13 +28,14 @@ public class SearchUserTest extends Base {
 		// login.enterPasswordOnPasswordField(password);
 		// login.clickSignInButton();
 
+		String usrname=ExcelUtility.getStringData(0, 0, "AdminUsers");
 		// AddUserPage addUser = new AddUserPage(driver);
 		// addUser.clickAdminUsers();
 		// addUser.clickManagerUser();
 		addUser = homePage.clickAdminUsers();
 		addUser.clickManagerUser();
 		search = addUser.clickSearchBtnMain();
-		search.enterUserName().selectUserType().clickSearchBtnSmall();
+		search.enterUserName(usrname).selectUserType().clickSearchBtnSmall();
 
 		// SearchUserPage search = new SearchUserPage(driver);
 		// search.clickSearchBtnMain();

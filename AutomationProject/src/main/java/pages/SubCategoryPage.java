@@ -56,15 +56,15 @@ public class SubCategoryPage {
 		return this;
 	}
 
-	public SubCategoryPage selectCategoryFromDropDown() {
+	public SubCategoryPage selectCategoryFromDropDown(String categry) {
 		// Select select = new Select(selectCategory);
 		// select.selectByContainsVisibleText("Electronics");
-		pageUtility.selectByContainsVisibleText(selectCategory, "veggies");
+		pageUtility.selectByContainsVisibleText(selectCategory,categry);
 		return this;
 	}
 
-	public SubCategoryPage enterSubCategory() {
-		subCategory.sendKeys("Cabbage2");
+	public SubCategoryPage enterSubCategory(String subCatgry) {
+		subCategory.sendKeys(subCatgry);
 		return this;
 	}
 
@@ -90,15 +90,15 @@ public class SubCategoryPage {
 
 	}
 
-	public SubCategoryPage selectSearchCategory() {
+	public SubCategoryPage selectSearchCategory(String categry) {
 		// Select select = new Select(searchCategory);
 		// select.selectByContainsVisibleText("Electronics");
-		pageUtility.selectByContainsVisibleText(searchCategory, "Electronics");
+		pageUtility.selectByContainsVisibleText(searchCategory, categry);
 		return this;
 	}
 
-	public SubCategoryPage enterSearchSubCategory() {
-		enterCategory.sendKeys("cabbage");
+	public SubCategoryPage enterSearchSubCategory(String subCategry) {
+		enterCategory.sendKeys(subCategry);
 		return this;
 	}
 

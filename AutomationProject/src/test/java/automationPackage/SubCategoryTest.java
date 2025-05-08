@@ -17,7 +17,7 @@ public class SubCategoryTest extends Base {
 	public HomePage homePage;
 	public SubCategoryPage subCategory;
 	
-	@Test(priority = 1, description="verify whether user is able to add subcategory")
+	@Test(priority = 1, description="verify whether user is able to add subcategory", retryAnalyzer = retryPackage.Retry.class)
 	public void createSubCategory() throws IOException, AWTException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
@@ -25,8 +25,11 @@ public class SubCategoryTest extends Base {
 		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password);
 		//login.enterPasswordOnPasswordField(password);
 		homePage=login.clickSignInButton();
+		
+		String categry=ExcelUtility.getStringData(0, 0, "SubCategory");
+		String subCategry=ExcelUtility.getStringData(0, 1, "SubCategory");
 		subCategory=homePage.clickMoreInfo();
-		subCategory.clickNewBtn().selectCategoryFromDropDown().enterSubCategory().chooseImage().clickSaveBtn();
+		subCategory.clickNewBtn().selectCategoryFromDropDown(categry).enterSubCategory(subCategry).chooseImage().clickSaveBtn();
 		boolean successAlert=subCategory.succesAlertAfterAddingSubCategory();
 		Assert.assertSame(true,successAlert,Constant.ERR_MSG_ALERT_AFTER_ADDING_SUBCATEGORY);
 		//SubCategoryPage subCategory = new SubCategoryPage(driver);
@@ -39,7 +42,7 @@ public class SubCategoryTest extends Base {
 
 	}
 
-	@Test(priority = 2, description="verify whether user is able to search subcategory")
+	@Test(priority = 2, description="verify whether user is able to search subcategory", retryAnalyzer = retryPackage.Retry.class)
 	public void searchSubCategory() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
@@ -47,8 +50,11 @@ public class SubCategoryTest extends Base {
 		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password);
 		//login.enterPasswordOnPasswordField(password);
 		homePage=login.clickSignInButton();
+		
+		String categry=ExcelUtility.getStringData(0, 0, "SubCategory");
+		String subCategry=ExcelUtility.getStringData(0, 1, "SubCategory");
 		subCategory=homePage.clickMoreInfo();
-		subCategory.clickSearchBtnMain().selectSearchCategory().enterSearchSubCategory().clickSearchBtnSmall();
+		subCategory.clickSearchBtnMain().selectSearchCategory(categry).enterSearchSubCategory(subCategry).clickSearchBtnSmall();
 		//SubCategoryPage subCategory = new SubCategoryPage(driver);
 		//subCategory.clickMoreInfo();
 		//subCategory.clickSearchBtnMain();

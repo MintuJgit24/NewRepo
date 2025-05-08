@@ -2,6 +2,7 @@ package automationPackage;
 
 import java.io.IOException;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import constant.Constant;
@@ -9,13 +10,16 @@ import pages.AddUserPage;
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 
 public class AddUserTest extends Base {
 
 	public HomePage homePage;
 	public AddUserPage addUser;
+	public FakerUtility fakerUtility = new FakerUtility();
 
-	@Test(description = "verify whether user is able to add new user",retryAnalyzer = retryPackage.Retry.class)
+	@Test(description = "verify whether user is able to add new user", retryAnalyzer = retryPackage.Retry.class)
+
 	public void addNewUser() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
@@ -25,6 +29,11 @@ public class AddUserTest extends Base {
 		// login.enterPasswordOnPasswordField(password);
 		// login.clickSignInButton();
 
+		// String usrname = ExcelUtility.getStringData(0, 0, "AdminUsers");
+		// using faker instead of excel
+		String fakeData = fakerUtility.getFakeFirstName();
+		String pasword = ExcelUtility.getStringData(0, 1, "AdminUsers");
+		String usertype = ExcelUtility.getStringData(0, 2, "AdminUsers");
 		// AddUserPage addUser=new AddUserPage(driver);
 		// addUser.clickAdminUsers();
 		// addUser.clickManagerUser();
@@ -32,9 +41,10 @@ public class AddUserTest extends Base {
 		// addUser.selectUserType();
 		// addUser.clickSaveBtn();
 		addUser = homePage.clickAdminUsers();
-		addUser.clickManagerUser().clickNew().selectUserType().clickSaveBtn();
+		addUser.clickManagerUser().clickNew().enterUsername(fakeData).enterPasword(pasword).selectUserType(usertype)
+				.clickSaveBtn();
 
 		boolean isAlertDisplayed = addUser.isAlertDisplayed();
-		Assert.assertTrue(isAlertDisplayed,Constant.ERR_MSG_ALERT_AFTER_ADDING_USER);
+		Assert.assertTrue(isAlertDisplayed, Constant.ERR_MSG_ALERT_AFTER_ADDING_USER);
 	}
 }

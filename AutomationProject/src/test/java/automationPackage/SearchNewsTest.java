@@ -17,7 +17,7 @@ public class SearchNewsTest extends Base {
 	public AddNewsPage news;
 	public SearchNewsPage searchNews;
 
-	@Test(description = "verify whether user is able to search news")
+	@Test(description = "verify whether user is able to search news", retryAnalyzer = retryPackage.Retry.class)
 	public void searchNews() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
@@ -27,12 +27,13 @@ public class SearchNewsTest extends Base {
 		// login.clickSignInButton();
 		homePage = login.clickSignInButton();
 
+		String addNews=ExcelUtility.getStringData(0, 0, "ManageNews");
 		// AddNewsPage news=new AddNewsPage(driver);
 		// news.clickManageNews();
 		news = homePage.clickManageNews();
 		// SearchNewsPage searchNews=new SearchNewsPage(driver);
 		searchNews = news.clickSearchBtnMain();
-		searchNews.enterNewsTitle();
+		searchNews.enterNewsTitle(addNews);
 		searchNews.clickSearchBtnSmall();
 
 		String expected = ".........RESULT NOT FOUND.......";

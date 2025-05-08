@@ -37,8 +37,8 @@ public class SearchUserPage {
 		//return this;
 	//}
 	
-	public SearchUserPage enterUserName() {
-		username.sendKeys("happy");
+	public SearchUserPage enterUserName(String usrname) {
+		username.sendKeys(usrname);
 		return this;
 	}
 	

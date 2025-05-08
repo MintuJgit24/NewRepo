@@ -52,15 +52,26 @@ public class AddUserPage {
 
 	public AddUserPage clickNew() {
 		newBtn.click();
-		username.sendKeys("NGuser9");
-		paswd.sendKeys("test23");
+		//username.sendKeys("NGuser9");
+		//paswd.sendKeys("test23");
+		return this;
+	}
+	
+	public AddUserPage enterUsername(String user_name) {
+		username.sendKeys(user_name);
+		return this;
+	}
+	
+	public AddUserPage enterPasword(String pswd) {
+		paswd.sendKeys(pswd);
 		return this;
 	}
 
-	public AddUserPage selectUserType() {
+	public AddUserPage selectUserType(String user_type) {
 		// pageUtility.selectByVisibleText(userTypeSelect, "Staff");
 		// pageUtility.selectByIndex(userTypeSelect, 1);
-		pageUtility.selectByContainsVisibleText(userTypeSelect, "Partner");
+		
+		pageUtility.selectByContainsVisibleText(userTypeSelect, user_type);
 		return this;
 	}
 

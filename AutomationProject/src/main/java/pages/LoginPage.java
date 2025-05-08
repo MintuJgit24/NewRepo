@@ -52,6 +52,7 @@ public class LoginPage {
 		return homeTitle.isDisplayed();
 	}
 	
+	//to see loginbox for invalid credentials
 	public boolean isLoginBoxDisplayed() {
 		return loginBox.isDisplayed();
 	}
