@@ -14,6 +14,7 @@ public class Constant {
 	public static final String ERR_MSG_ALERT_AFTER_ADDING_NEWS="News not added";
 	public static final String ERR_MSG_NEWS_FOUND="News found";
 	public static final String ERR_MSG_NEWS_NOT_FOUND="News not found";
+	public static final String ERR_MSG_FOR_LOGOUT_CLICK="Logout is unsuccessful";
 	
 	public static final String CONFIGFILE=System.getProperty("user.dir") + "//src//main//resources//config.properties";
 }
