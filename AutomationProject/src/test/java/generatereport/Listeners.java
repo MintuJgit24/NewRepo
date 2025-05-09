@@ -16,11 +16,11 @@ public class Listeners implements ITestListener {
 	ExtentTest test;
 
 	ExtentReports extent = ExtentReportsUtility.createExtentReports();
-	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
+	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();//to avoid overlapping during execution
 
 	public void onTestStart(ITestResult result) {// calls when test methods starts
 		ITestListener.super.onTestStart(result);
-		test = extent.createTest(result.getMethod().getMethodName());
+		test = extent.createTest(result.getMethod().getMethodName());//to get methodname in the report
 		extentTest.set(test);
 	}
 
@@ -39,7 +39,7 @@ public class Listeners implements ITestListener {
 			driver = (WebDriver) result.getTestClass().getRealClass().getDeclaredField("driver")
 					.get(result.getInstance());
 		} catch (IllegalArgumentException e) {
-			e.printStackTrace();
+			e.printStackTrace();//to know why it failed
 		} catch (IllegalAccessException e) {
 
 			e.printStackTrace();
@@ -78,5 +78,6 @@ public class Listeners implements ITestListener {
 	public void onFinish(ITestContext context) {// called after test method finishes
 		ITestListener.super.onFinish(context);
 		extent.flush();// if flush is not called report wont be generated
+		//flush to generate reports
 	}
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-08T13:06:57 IST" name="Suite" finished-at="2025-05-08T13:07:04 IST" duration-ms="6687">
+  <suite started-at="2025-05-09T16:52:32 IST" name="Suite" finished-at="2025-05-09T16:52:38 IST" duration-ms="6140">
     <groups>
     </groups>
-    <test started-at="2025-05-08T13:06:57 IST" name="ChromeTest" finished-at="2025-05-08T13:07:04 IST" duration-ms="6687">
+    <test started-at="2025-05-09T16:52:32 IST" name="ChromeTest" finished-at="2025-05-09T16:52:38 IST" duration-ms="6140">
       <class name="automationPackage.AddUserTest">
-        <test-method is-config="true" signature="browserInitialisation(java.lang.String)[pri:0, instance:automationPackage.AddUserTest@42e99e4a]" started-at="2025-05-08T13:06:57 IST" name="browserInitialisation" finished-at="2025-05-08T13:07:01 IST" duration-ms="3670" status="PASS">
+        <test-method is-config="true" signature="browserInitialisation(java.lang.String)[pri:0, instance:automationPackage.AddUserTest@14dd9eb7]" started-at="2025-05-09T16:52:32 IST" name="browserInitialisation" finished-at="2025-05-09T16:52:35 IST" duration-ms="3190" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialisation -->
-        <test-method signature="addNewUser()[pri:0, instance:automationPackage.AddUserTest@42e99e4a]" started-at="2025-05-08T13:07:01 IST" name="addNewUser" description="verify whether user is able to add new user" finished-at="2025-05-08T13:07:04 IST" duration-ms="2977" status="PASS">
+        <test-method signature="addNewUserFake()[pri:0, instance:automationPackage.AddUserTest@14dd9eb7]" started-at="2025-05-09T16:52:35 IST" name="addNewUserFake" description="verify whether user is able to add new user" finished-at="2025-05-09T16:52:38 IST" duration-ms="2917" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addNewUser -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:automationPackage.AddUserTest@42e99e4a]" started-at="2025-05-08T13:07:04 IST" name="driverQuit" finished-at="2025-05-08T13:07:04 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- addNewUserFake -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:automationPackage.AddUserTest@14dd9eb7]" started-at="2025-05-09T16:52:38 IST" name="driverQuit" finished-at="2025-05-09T16:52:38 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addNewUser status=SUCCESS method=AddUserTest.addNewUser()[pri:0, instance:automationPackage.AddUserTest@42e99e4a] output={null}]]]>
+                <![CDATA[[TestResult name=addNewUserFake status=SUCCESS method=AddUserTest.addNewUserFake()[pri:0, instance:automationPackage.AddUserTest@14dd9eb7] output={null}]]]>
               </value>
             </param>
           </params>

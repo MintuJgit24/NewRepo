@@ -11,13 +11,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
 public class ScreenShotUtility {
-	public void getScreenshot(WebDriver driver,String failedTestCase) throws IOException
+	public void getScreenshot(WebDriver driver, String failedTestCase) throws IOException
 
 	{
 
 		TakesScreenshot scrShot = (TakesScreenshot) driver;
 		File screenShot = scrShot.getScreenshotAs(OutputType.FILE);
-		String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date());//for getting unique timestamp
+		String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date());// for getting unique
+																							// timestamp
 		File f1 = new File(System.getProperty("user.dir") + "//OutputScreenShot");
 		if (!f1.exists()) {
 			f1.mkdirs();

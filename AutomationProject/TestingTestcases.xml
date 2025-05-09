@@ -2,16 +2,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 
-<test name="ChromeTest">
-<!--<parameter name="username" value="Username"></parameter>
-<parameter name="password" value="Password"></parameter>-->
-<parameter name="browsers" value="Chrome"></parameter>
-	<classes>
-		<class name="automationPackage.AddUserTest">
-			<methods>
-				<include name="addNewUser"></include>
-			</methods>
-		</class>
-	</classes>
-</test>
+	<test name="ChromeTest">
+		<!--<parameter name="username" value="chicky"></parameter>
+		<parameter name="password" value="123"></parameter>
+		<parameter name="browsers" value="Chrome"></parameter>-->
+		<classes>
+			<class name="automationPackage.AddUserTest">
+				<methods>
+					<include name="addNewUser"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
 </suite>

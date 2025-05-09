@@ -7,9 +7,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class PageUtility {
-	//to help pages
+	
 	public WebDriver driver;
 	
+	//Select
 	public void selectByVisibleText(WebElement element, String text) {
 		Select select=new Select(element);
 		select.selectByVisibleText(text);
@@ -25,11 +26,13 @@ public class PageUtility {
 		select.selectByContainsVisibleText(text);
 	}
 	
+	//Actions
 	public void dragAndDrop(WebElement element) {
 		Actions action=new Actions(driver);
 		action.dragAndDrop(element, element).build().perform();
 	}
 	
+	//JavascriptExecutor
 	public void scrollPage() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,1000)", "");//to scroll down the page
