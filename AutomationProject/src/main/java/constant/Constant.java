@@ -17,6 +17,6 @@ public class Constant {
 	public static final String ERR_MSG_FOR_LOGOUT_CLICK="Logout is unsuccessful";
 	
 	public static final String CONFIGFILE=System.getProperty("user.dir") + "//src//main//resources//config.properties";
-	public static final String EXCELPATH="\\src\\test\\resources\\TestData.xlsx";
+	public static final String EXCELPATH=System.getProperty("user.dir")+"\\src\\test\\resources\\TestData.xlsx";
 }
 

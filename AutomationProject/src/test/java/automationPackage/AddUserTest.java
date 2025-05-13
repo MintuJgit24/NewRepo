@@ -47,7 +47,7 @@ public class AddUserTest extends Base {
 
 	// using fakerUtility
 	@Test(description = "verify whether user is able to add new user", retryAnalyzer = retryPackage.Retry.class)
-	public void addNewUserFake() throws IOException {
+	public void addNewUserUsingFakerUtility() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
@@ -67,10 +67,10 @@ public class AddUserTest extends Base {
 	}
 
 	// using parameter here and in xml
-    /*
+    
 	@Test(description = "verify whether user is able to add new user", retryAnalyzer = retryPackage.Retry.class)
 	@Parameters({ "username", "password" })
-	public void addNewUserParam(String usrname, String pasword) throws IOException {
+	public void addNewUserUsingParameters(String usrname, String pasword) throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
@@ -83,6 +83,6 @@ public class AddUserTest extends Base {
 				.clickSaveBtn();
 		boolean isAlertDisplayed = addUser.isAlertDisplayed();
 		Assert.assertTrue(isAlertDisplayed, Constant.ERR_MSG_ALERT_AFTER_ADDING_USER);
-	}*/
+	}
 
 }
